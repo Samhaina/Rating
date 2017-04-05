@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  number_of_participants: 
+  date_start: 2017-04-02
+  date_end: 2017-04-02
+  city: MyString
+  number_of_rounds: 
+
+two:
+  title: MyString
+  number_of_participants: 
+  date_start: 2017-04-02
+  date_end: 2017-04-02
+  city: MyString
+  number_of_rounds: 

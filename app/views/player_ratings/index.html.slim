@@ -1,0 +1,19 @@
+table
+    tr
+        th Имя
+        th Город
+        th Рейтинг vnovikov
+        th 
+        th 
+
+        - @players.each do |p|       
+                tr
+
+                    td = p.name
+                    td = p.city
+                    td = p.vnovikov_rating.round(2)
+                    td 
+                    td 
+        
+        
+
