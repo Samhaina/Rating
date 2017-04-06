@@ -31,12 +31,11 @@ class Tournament < ApplicationRecord
 			k_number_of_nonresidents = tournament.k_nonresidents
 			
 # 3rd addend			
-# Be careful & check!
-# Some tournaments havn't number_of_rounds, so their k_sum was added manually
+# Some tournaments havn't number_of_rounds, so their k_sums were added manually
 			k_number_of_rounds = 0
 
 			case tournament.number_of_rounds
-			when 6..8, nil  						
+			when 6..8  						
 				k_number_of_rounds = 0.1
 			when 9..12
 				k_number_of_rounds = 0.2				
