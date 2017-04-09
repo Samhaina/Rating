@@ -1,8 +1,36 @@
+
+table
+    tr
+        th Название
+        th Город
+        th k_sum
+        th k_fading
+        th 
+        th 
+        th 
+        th 
+
+        - @tournaments.each do |t|       
+                tr
+
+                    td = t.title
+                    td = t.city
+                    td = t.k_sum
+                    td = t.k_fading
+                    td 
+                    td 
+                    td 
+                    td 
+       
+        
 table
     tr
         th Имя
         th Город
-        th Рейтинг vnovikov
+        th Рейтинг Новикова
+        th Тестовый рейтинг
+        th 
+        th 
         th 
         th 
 
@@ -12,8 +40,8 @@ table
                     td = p.name
                     td = p.city
                     td = p.vnovikov_rating.round(2)
+                    td = p.rating.round(2)
                     td 
                     td 
-        
-        
-
+                    td 
+                    td 
