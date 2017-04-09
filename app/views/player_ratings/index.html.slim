@@ -1,6 +1,8 @@
 
 table
     tr
+
+        th Date
         th Название
         th Город
         th k_sum
@@ -13,6 +15,7 @@ table
         - @tournaments.each do |t|       
                 tr
 
+                    th = t.date_end
                     td = t.title
                     td = t.city
                     td = t.k_sum

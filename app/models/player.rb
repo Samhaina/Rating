@@ -49,7 +49,7 @@ class Player < ApplicationRecord
 
     tournament = Tournament.find(result.tournament_id)
 
-    if tournament.k_fading > 0
+    if tournament.k_fading > 0 
 
       a1.push (result.points * tournament.k_sum * tournament.k_fading)
       
@@ -73,17 +73,17 @@ class Player < ApplicationRecord
    
    b.each do |variable|
 
-    p b1.push variable.inject(1){ |result, elem| (result * elem) }
+    b1.push variable.inject(1){ |result, elem| (result * elem) }
     variable.shift
-    p b2.push variable.inject(1){ |result, elem| (result * elem) }
+    b2.push variable.inject(1){ |result, elem| (result * elem) }
 
    end  
 
-   b2.sum == 0 ? rating_best = 0 : rating_best = b1.sum / b2.sum
+   b2.sum == 0 ? rating_best = 0 : rating_best = b1.sum / (b2.size < 3 ? b2.sum + (3-b2.size) : b2.sum)
 
    
 
-   player.rating = (rating_all + rating_best) / 2
+   player.rating = (rating_all + rating_best) / 2 
 
    player.save!
   

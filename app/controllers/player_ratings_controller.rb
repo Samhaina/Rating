@@ -8,7 +8,7 @@ class PlayerRatingsController < ApplicationController
 			format.json { render json: @players }
 		end
 
-		@tournaments = Tournament.all
+		@tournaments = Tournament.all.order("date_end DESC")
 
 		respond_to do |format|
 			format.html # index.html.erb
